@@ -139,7 +139,6 @@ describe('Basic user flow for Website', () => {
     const cartSize = await page.$('#cart-count');
     let innert = await cartSize.getProperty("innerText");   
     let text = await innert.jsonValue();
-    console.log(text);
     expect(text === "0").toBe(true);
   }, 10000);
 
